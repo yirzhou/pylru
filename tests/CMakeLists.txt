@@ -7,9 +7,9 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
-
 set(target lru.t)
+
+file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
 
 add_executable(${target} ${SRCS})
 
