@@ -1,11 +1,8 @@
 #include <lru.h>
-#include <pybind11/pybind11.h>
-
-namespace py = pybind11;
 
 namespace pylru {
 template <typename Key, typename Value>
-lru<Key, Value>::lru(const int capacity) : capacity(capacity) {}
+lru<Key, Value>::lru(const int& capacity) : capacity(capacity) {}
 
 template <typename Key, typename Value>
 lru<Key, Value>::~lru() {}

@@ -11,8 +11,8 @@ enable_testing()
 include_directories(/Users/zhouyiren/opt/miniconda3/envs/native/include)
 find_package(pybind11 CONFIG REQUIRED)
 
-add_subdirectory(src)
+add_subdirectory("src")
 
 add_subdirectory("tests")
 
-pybind11_add_module(pylru src/lru.cpp)
+# pybind11_add_module(pylru src/lru.cpp)

@@ -15,7 +15,7 @@ class lru {
   std::unordered_map<Key, Value> mapping;
 
  public:
-  lru(const int);
+  lru(const int&);
   ~lru();
   Value get(const Key&);
   void put(const Key&, Value);
