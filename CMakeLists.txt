@@ -13,4 +13,6 @@ find_package(pybind11 CONFIG REQUIRED)
 
 add_subdirectory(src)
 
+add_subdirectory("tests")
+
 pybind11_add_module(pylru src/lru.cpp)
