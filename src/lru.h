@@ -31,7 +31,6 @@ lru<Key, Value>::~lru() {}
 template <typename Key, typename Value>
 Value lru<Key, Value>::get(const Key& k) {
   if (this->mapping.find(k) == this->mapping.end()) {
-    std::cout << "Can't find " << k << std::endl;
     return -1;
   }
 

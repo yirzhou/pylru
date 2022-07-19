@@ -31,10 +31,7 @@ node<Key, Value>::node(const Key& k, Value val, node* prev_node,
 }
 
 template <typename Key, typename Value>
-node<Key, Value>::~node() {
-  if (this->prev_node) delete this->prev_node;
-  if (this->next_node) delete this->next_node;
-}
+node<Key, Value>::~node() {}
 
 template <typename Key, typename Value>
 node<Key, Value>* node<Key, Value>::prev() {
