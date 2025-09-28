@@ -247,3 +247,17 @@ cython_debug/
 #.idea/
 
 # End of https://www.toptal.com/developers/gitignore/api/cmake,c++,python,macos
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc

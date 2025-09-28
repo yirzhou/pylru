@@ -15,5 +15,5 @@ project(pylru LANGUAGES CXX)
 enable_testing()
 
 add_subdirectory("include")
-
+add_subdirectory("src")
 add_subdirectory("tests")

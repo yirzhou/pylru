@@ -7,16 +7,22 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(googletest)
 
-set(target lru.t)
+# Unit tests
+set(test_target lru.t)
 
-file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/*.cpp)
+add_executable(${test_target} lru.t.cpp)
 
-add_executable(${target} ${SRCS})
-
-target_link_libraries(${target} PRIVATE
+target_link_libraries(${test_target} PRIVATE
     lru
     GTest::gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(${target})
+gtest_discover_tests(${test_target})
+
+# Performance tests
+set(perf_target lru.perf)
+
+add_executable(${perf_target} performance_test.cpp)
+
+target_link_libraries(${perf_target} PRIVATE lru)

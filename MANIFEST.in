@@ -1,0 +1,12 @@
+include README.md
+include LICENSE
+recursive-include include *.h
+recursive-include src *.cpp *.h
+include CMakeLists.txt
+recursive-include tests *.cpp
+exclude test_python_binding.py
+exclude simple_test.cpp
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude build/*
